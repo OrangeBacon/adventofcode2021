@@ -1,10 +1,13 @@
+#![feature(drain_filter)]
+
 use anyhow::Result;
 use clap::{crate_authors, crate_description, crate_name, crate_version, App, Arg};
 
 mod day1;
 mod day2;
+mod day3;
 
-const SOLVERS: &[fn(&str) -> Result<(String, String)>] = &[day1::day1, day2::day2];
+const SOLVERS: &[fn(&str) -> Result<(String, String)>] = &[day1::day1, day2::day2, day3::day3];
 
 #[derive(Debug)]
 enum Errors {
